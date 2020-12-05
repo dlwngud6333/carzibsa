@@ -9,6 +9,6 @@ import com.app.login.vo.LoginVo;
 @Repository
 public interface LoginMapper {
 	
-	public List<LoginVo> getAll() throws Exception;
+	public List<LoginVo> getPerson() throws Exception;
 	
 }

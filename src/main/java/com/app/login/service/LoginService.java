@@ -9,6 +9,6 @@ import com.app.login.vo.LoginVo;
 @Service
 public interface LoginService {
 	
-	public List<LoginVo> getAll() throws Exception;
+	public List<LoginVo> getPerson() throws Exception;
 	
 }

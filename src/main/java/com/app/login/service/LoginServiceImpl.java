@@ -15,8 +15,8 @@ public class LoginServiceImpl implements LoginService{
     LoginMapper loginMapper;
 	
 	@Override
-	public List<LoginVo> getAll() throws Exception {
-		return loginMapper.getAll();
+	public List<LoginVo> getPerson() throws Exception {
+		return loginMapper.getPerson();
 	}
 
 }
