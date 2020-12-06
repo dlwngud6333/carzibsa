@@ -13,7 +13,7 @@ Build Tool  | babel : 6
 SCM | Git : 2.29.2.2
 DataBase | PostgreSql : 11.10
 Tool | Eclipse : SpringToolSuite4 4.8.1
-|| VS Code : 1.51.1
+Tool | VS Code : 1.51.1
 Tool | Dbvear : 7.3.0.202011291229
 Tool | Lombok : 1.18.16
 
