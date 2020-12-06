@@ -1,0 +1,47 @@
+.LoginFrameWork {
+    width: 100%;
+    height: 700px;
+    text-align: -webkit-center;
+    vertical-align: middle;
+}
+
+.loginFont {
+    width: 300px;
+    height: 100px;
+    margin-top: 100px;
+}
+
+.loginFont span{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.InputDiv {
+    width: 300px;
+    height: 100px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.InputDiv span {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.InputDiv input {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+}
+
+.loginBtn {
+    width: 100%;
+    height: 30px;
+}
+
+.naverBtn {
+    width: 100%;
+    height: 30px;
+}
+
+.rightDiv {
+    text-align: right;
+    font-size: 3;
+}
