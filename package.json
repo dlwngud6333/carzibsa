@@ -20,6 +20,8 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
+    "css-loader": "^3.1.0",
+    "style-loader": "^2.0.0",
     "webpack": "^3.8.0",
     "webpack-dev-server": "^2.9.7"
   }

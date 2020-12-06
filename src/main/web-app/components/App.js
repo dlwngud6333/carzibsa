@@ -1,25 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { Link } from 'react-router'
 
-import Home from '../react/react-login';
+
+import LoginPage from '../react/login/react-login';
+
+/**
+ * 라우터는 URL을 파라미터로 받고 해당 URL에 따라 페이지 이동하여 보여주는것으로 진행
+ * 
+ * 
+ */
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <div className='Menu-wrapper'>
-          <ul>
-            <Link to='/login'><li>Login</li></Link>
-            <Link to='/login2'><li>Login2</li></Link>
-          </ul>
-        </div>
-        <div className='Contents-wrapper'>
-          <Switch>
-            <Route exact path='/login' component={Home} />
-          </Switch>
-        </div>
-      </Router>
-    </div>
+    <LoginPage></LoginPage>
   );
 }
 
