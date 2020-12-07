@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-import '../../css/login.css'
-import customAxios from '../../js/customAxios';
+import '~/main/web-app/css/login.css'
+import customAxios from '~/main/web-app/js/customAxios';
 
 class RLogin extends React.Component {
 
@@ -47,11 +47,18 @@ class RLogin extends React.Component {
     }
 
     // 로그인 페이지에서 네이버 인증 요청문 API 호출
-    function callNaver(){
+    function callNaver(e){
+      e.preventDefault();
       customAxios(
         '/loginNaver'
         , callback
       );
+    }
+
+    // 로그인 페이지에서 네이버 인증 요청문 API 호출
+    function goRegistUser(e){
+      e.preventDefault();
+      document.location.href="http://localhost:7777/registUser"
     }
 
     return(
@@ -71,11 +78,15 @@ class RLogin extends React.Component {
           <button className="loginBtn">로그인</button>
           <br/>
           <div className="rightDiv">
-            <span className="registerA"><a>회원가입</a></span>
+            <span className="registerA">
+              <a href="#" onClick={goRegistUser}>회원가입</a>
+            </span>
           </div>
           <br/>
           <br/>
-          <button className="naverBtn" onClick={callNaver}>네이버 아이디로 로그인</button>
+          <a href="#" onClick={callNaver}>
+            <img src="../images/btn_naver_login.png" width="100%"></img>
+          </a>
         </div>
       </div>
     )
