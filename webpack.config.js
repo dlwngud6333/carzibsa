@@ -12,18 +12,19 @@ module.exports = {
         contentBase: __dirname + '/src/main/web-app/',
         historyApiFallback: true
     },
-
     module: {
             rules: [
-                {
+                  {
                     test: /\.(js|jsx)$/,
-                    loader: 'babel-loader',
                     exclude: /node_modules/,
-                    query: {
-                        cacheDirectory: true,
-                        presets: ['es2015', 'react']
+                    use: {
+                        loader: 'babel-loader',
+                        query: {
+                            cacheDirectory: true,
+                            presets: ["@babel/react", "@babel/env"]
+                        }
                     }
-                }, {
+                  }, {
                     test: /\.css$/,
                     use: [{
                             loader: 'style-loader'

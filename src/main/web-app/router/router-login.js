@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import LoginPage from '../react/login/react-login';
-import MainPage from '../react/main/react-main';
-import BoardPage from '../react/board/react-board';
+import LoginPage from '@/react/login/react-login';
+import MainPage from '@/react/main/react-main';
+import BoardPage from '@/react/board/react-board';
 import { BrowserRouter as Router, Route, Redirect, Switch} from "react-router-dom";
 
 class RLogin extends React.Component {

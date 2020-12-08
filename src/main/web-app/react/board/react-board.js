@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-import '../../css/login.css'
-import customAxios from '../../js/customAxios';
+import '@/css/login.css'
+import customAxios from '@/js/customAxios';
 
 class RBoard extends React.Component {
 

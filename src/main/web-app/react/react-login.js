@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import customAxios from '../js/customAxios';
+import customAxios from '@/js/customAxios';
 
 function App() {
   // IP주소 변수 선언

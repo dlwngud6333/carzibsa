@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-import '~/main/web-app/css/login.css'
-import customAxios from '~/main/web-app/js/customAxios';
+import '@/css/login.css'
+import customAxios from '@/js/customAxios';
 
 class RLogin extends React.Component {
 
