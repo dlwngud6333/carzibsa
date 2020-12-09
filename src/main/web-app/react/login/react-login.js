@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import '@/css/login.css'
 import customAxios from '@/js/customAxios';
+import {properties} from '@/js/properties.js';
 
 class RLogin extends React.Component {
 
@@ -35,9 +36,9 @@ class RLogin extends React.Component {
     // 네아로 정상 호출 시 Main 화면 이동
     function callbackCB(data) {
       if(data.message === 'success'){
-        document.location.href="http://localhost:7777/main"
+        document.location.href=properties.frontEndUrl+"/main"
       }else{
-        document.location.href="http://localhost:7777"
+        document.location.href=properties.frontEndUrl
       }
     }
     
@@ -58,7 +59,7 @@ class RLogin extends React.Component {
     // 로그인 페이지에서 네이버 인증 요청문 API 호출
     function goRegistUser(e){
       e.preventDefault();
-      document.location.href="http://localhost:7777/registUser"
+      document.location.href=properties.frontEndUrl+"/registUser"
     }
 
     return(

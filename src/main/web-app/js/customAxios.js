@@ -1,11 +1,12 @@
 import axios from 'axios'; // 액시오스
+import {properties} from '@/js/properties.js';
 
 export default function customAxios(url, callback, paramObj) {
   axios(
     {
       url: '/rest' + url,
       method: 'post',
-      baseURL: 'http://localhost:8080',
+      baseURL: properties.backEndUrl,
       withCredentials: true,
       params : paramObj
     }
