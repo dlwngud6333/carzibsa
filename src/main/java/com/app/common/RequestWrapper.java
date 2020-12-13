@@ -20,7 +20,7 @@ public class RequestWrapper extends HttpServletRequestWrapper {
 	public RequestWrapper(HttpServletRequest request) throws IOException {
 		super(request);
 		XssFilter filter = XssFilter.getInstance("lucy-xss-sax.xml");
-		b = new String(filter.doFilter(getBody(request))).getBytes();
+        b = new String(filter.doFilter(getBody(request))).getBytes("UTF-8");
 	}
 
 	public ServletInputStream getInputStream() throws IOException {
@@ -60,6 +60,7 @@ public class RequestWrapper extends HttpServletRequestWrapper {
 			
 		}
 
+
 	}
 
 	public static String getBody(HttpServletRequest request) throws IOException {
@@ -71,7 +72,7 @@ public class RequestWrapper extends HttpServletRequestWrapper {
 		try {
 			InputStream inputStream = request.getInputStream();
 			if (inputStream != null) {
-				bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+				bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
 				char[] charBuffer = new char[128];
 				int bytesRead = -1;
 				while ((bytesRead = bufferedReader.read(charBuffer)) > 0) {
